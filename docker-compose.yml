@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: cakeshop
+    volumes:
+      - C:\Gehan\Personal\docker\postgres_data:/var/lib/postgresql/data
+    restart: always
+
+
+
+# here volumes property used to store database information in locally.
+# then no need to create tables and other things again an again.

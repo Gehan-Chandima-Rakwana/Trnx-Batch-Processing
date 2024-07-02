@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: BATCH_PROCESSING
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/batch-processing
