@@ -14,16 +14,13 @@ import java.util.List;
     "rentityBranch",
     "submissionCode",
     "reportCode",
-    "entityReference",
-    "fiuRefNumber",
+//    "entityReference",
+//    "fiuRefNumber",
     "submissionDate",
     "currencyCodeLocal",
-    "reportingPerson",
-    "location",
     "reason",
     "action",
     "transaction",
-    "activity",
     "reportIndicators"
 })
 @XmlRootElement(name = "report")
@@ -35,13 +32,14 @@ public class Report {
     protected String rentityBranch;
     @XmlElement(name = "submission_code", required = true)
     protected String submissionCode;
+
     @XmlElement(name = "report_code", required = true)
     @XmlSchemaType(name = "string")
     protected ReportType reportCode;
-    @XmlElementRef(name = "entity_reference", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> entityReference;
-    @XmlElementRef(name = "fiu_ref_number", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> fiuRefNumber;
+//    @XmlElementRef(name = "entity_reference", type = JAXBElement.class, required = false)
+//    protected JAXBElement<String> entityReference;
+//    @XmlElementRef(name = "fiu_ref_number", type = JAXBElement.class, required = false)
+//    protected JAXBElement<String> fiuRefNumber;
     @XmlElement(name = "submission_date", required = true)
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar submissionDate;
@@ -49,7 +47,6 @@ public class Report {
     @XmlSchemaType(name = "string")
     protected CurrencyType currencyCodeLocal;
 
-    protected TAddress location;
     protected String reason;
     protected String action;
     protected List<Transaction> transaction;
@@ -88,21 +85,21 @@ public class Report {
         this.reportCode = value;
     }
 
-    public JAXBElement<String> getEntityReference() {
-        return entityReference;
-    }
-
-    public void setEntityReference(JAXBElement<String> value) {
-        this.entityReference = value;
-    }
-
-    public JAXBElement<String> getFiuRefNumber() {
-        return fiuRefNumber;
-    }
-
-    public void setFiuRefNumber(JAXBElement<String> value) {
-        this.fiuRefNumber = value;
-    }
+//    public JAXBElement<String> getEntityReference() {
+//        return entityReference;
+//    }
+//
+//    public void setEntityReference(JAXBElement<String> value) {
+//        this.entityReference = value;
+//    }
+//
+//    public JAXBElement<String> getFiuRefNumber() {
+//        return fiuRefNumber;
+//    }
+//
+//    public void setFiuRefNumber(JAXBElement<String> value) {
+//        this.fiuRefNumber = value;
+//    }
 
     public XMLGregorianCalendar getSubmissionDate() {
         return submissionDate;
@@ -120,12 +117,6 @@ public class Report {
     }
 
 
-    public TAddress getLocation() {
-        return location;
-    }
-    public void setLocation(TAddress value) {
-        this.location = value;
-    }
     public String getReason() {
         return reason;
     }
@@ -193,13 +184,8 @@ public class Report {
         "datePosting",
         "valueDate",
         "transmodeCode",
-        "transmodeComment",
+//        "transmodeComment",
         "amountLocal",
-        "involvedParties",
-        "tFromMyClient",
-        "tFrom",
-        "tToMyClient",
-        "tTo",
         "goodsServices",
         "comments"
     })
@@ -226,8 +212,8 @@ public class Report {
         protected XMLGregorianCalendar valueDate;
         @XmlElement(name = "transmode_code", required = true)
         protected String transmodeCode;
-        @XmlElementRef(name = "transmode_comment", type = JAXBElement.class, required = false)
-        protected JAXBElement<String> transmodeComment;
+//        @XmlElementRef(name = "transmode_comment", type = JAXBElement.class, required = false)
+//        protected JAXBElement<String> transmodeComment;
         @XmlElement(name = "amount_local", required = true)
         protected BigDecimal amountLocal;
         @XmlElement(name = "goods_services")
@@ -291,12 +277,12 @@ public class Report {
         public void setTransmodeCode(String value) {
             this.transmodeCode = value;
         }
-        public JAXBElement<String> getTransmodeComment() {
-            return transmodeComment;
-        }
-        public void setTransmodeComment(JAXBElement<String> value) {
-            this.transmodeComment = value;
-        }
+//        public JAXBElement<String> getTransmodeComment() {
+//            return transmodeComment;
+//        }
+//        public void setTransmodeComment(JAXBElement<String> value) {
+//            this.transmodeComment = value;
+//        }
         public BigDecimal getAmountLocal() {
             return amountLocal;
         }

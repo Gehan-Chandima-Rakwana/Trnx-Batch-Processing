@@ -38,9 +38,9 @@ public class TransactionService {
 
         if (transactionDto.getTransmodeCode() != null)
             transaction.setTransmodeCode(transactionDto.getTransmodeCode());
-
-        if (transactionDto.getTransmodeComment() != null)
-            transaction.setTransmodeComment(XmlUtils.createJAXBElement("transmode_comment", transactionDto.getTransmodeComment()));
+//
+//        if (transactionDto.getTransmodeComment() != null)
+//            transaction.setTransmodeComment(XmlUtils.createJAXBElement("transmode_comment", transactionDto.getTransmodeComment()));
 
         if (transactionDto.getAmountLocal() != null)
             transaction.setAmountLocal(transactionDto.getAmountLocal());

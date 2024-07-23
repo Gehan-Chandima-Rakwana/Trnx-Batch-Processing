@@ -1,0 +1,2 @@
+report_id,action,currency_code_local,entity_reference,fiu_ref_number,is_active,location,reason,rentity_branch,rentity_id,report_code,reporting_person,submission_code,submission_date,status_id
+1,Testing,LKR,4455869,111222,t,,Testing,Head Office,5,CTR,,E,,1

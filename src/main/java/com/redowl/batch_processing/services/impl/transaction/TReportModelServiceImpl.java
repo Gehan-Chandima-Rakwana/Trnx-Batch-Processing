@@ -26,7 +26,7 @@ public class TReportModelServiceImpl implements TReportModelService {
         log.info("Inside TReportModelService: getReportDetailsByReportCode method");
         try {
             Optional<TReport> resultOp = tReportDao.findByReportCodeAndIsActive(reportCode, true);
-            System.out.println("Transaction Count"+ resultOp.get().getTTransactions().size());
+//            System.out.println("Transaction Count"+ resultOp.get().getTTransactions().size());
             TReport response = null;
             TReportDto responseDto = null;
             if (resultOp.isPresent()) {

@@ -34,11 +34,11 @@ public class ReportService {
             if (xmlReportDto.getReportCode() != null)
                 report.setReportCode(ReportType.fromValue(xmlReportDto.getReportCode()));
 
-            if (xmlReportDto.getEntityReference() != null)
-                report.setEntityReference(XmlUtils.createJAXBElement("entity_reference", xmlReportDto.getEntityReference()));
-
-            if (xmlReportDto.getFiuRefNumber() != null)
-                report.setFiuRefNumber(XmlUtils.createJAXBElement("fiu_ref_number", xmlReportDto.getFiuRefNumber()));
+//            if (xmlReportDto.getEntityReference() != null)
+//                report.setEntityReference(XmlUtils.createJAXBElement("entity_reference", xmlReportDto.getEntityReference()));
+//
+//            if (xmlReportDto.getFiuRefNumber() != null)
+//                report.setFiuRefNumber(XmlUtils.createJAXBElement("fiu_ref_number", xmlReportDto.getFiuRefNumber()));
 
             if (xmlReportDto.getSubmissionDate() != null)
                 report.setSubmissionDate(XmlUtils.createXMLGregorianCalendar(xmlReportDto.getSubmissionDate().toString()));

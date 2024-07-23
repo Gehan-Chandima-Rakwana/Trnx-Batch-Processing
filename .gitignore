@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Ignore specific CSV files
+report-table.csv
+transaction-table.csv
