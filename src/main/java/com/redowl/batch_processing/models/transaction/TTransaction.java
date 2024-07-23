@@ -1,5 +1,6 @@
 package com.redowl.batch_processing.models.transaction;
 
+import com.redowl.batch_processing.models.reference.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -88,10 +89,10 @@ public class TTransaction implements Serializable {
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="STATUS_ID", referencedColumnName = "STATUS_ID", nullable = false)
-	private com.redowl.batch_processing.models.reference.RStatus RStatus;
+	private RStatus RStatus;
 
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="REPORT_ID", referencedColumnName = "REPORT_ID", nullable = false)
-	private com.redowl.batch_processing.models.transaction.TReport TReport;
+	private TReport TReport;
 
 }
